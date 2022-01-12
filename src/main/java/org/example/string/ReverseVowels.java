@@ -19,26 +19,38 @@ public class ReverseVowels {
 
         char[] charArray = s.toCharArray();
 
-        int start=0;
-        int end = s.length()-1;
+        int left=0;
+        int right = s.length()-1;
+        boolean leftFlag = false;
+        boolean rightFlag = false;
 
         char temp;
 
-        while (start<end){
-            if(!set.contains(charArray[start])){
-                start++;
+        while (left<right){
+            if(set.contains(charArray[left])){
+                leftFlag = true;
             }
 
-            if(!set.contains(charArray[end])){
-                end--;
+            else{
+                left++;
             }
 
-            temp = charArray[start];
-            charArray[start] = charArray[end];
-            charArray[end] = temp;
+            if(set.contains(charArray[right])){
+                rightFlag=true;
+            }
 
-            start++;
-            end--;
+            else {
+                right--;
+            }
+
+            if(leftFlag && rightFlag){
+                temp = charArray[left];
+                charArray[left] = charArray[right];
+                charArray[right] = temp;
+
+                left++;
+                right--;
+            }
 
         }
         return String.valueOf(charArray);
