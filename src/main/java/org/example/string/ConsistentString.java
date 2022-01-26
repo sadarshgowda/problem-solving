@@ -10,7 +10,7 @@ public class ConsistentString {
        System.out.println(checkIfStringIsConsistent(allowed,words));
     }
 
-    public static int  checkIfStringIsConsistent(String allowed, String[] words ){
+    public static int checkIfStringIsConsistent(String allowed, String[] words ){
         Set<Character> consistent = new HashSet<>();
         for(int i =0; i< allowed.length(); i++){
             consistent.add(allowed.charAt(i));
