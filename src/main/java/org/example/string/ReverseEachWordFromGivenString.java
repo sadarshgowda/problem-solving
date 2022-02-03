@@ -1,6 +1,6 @@
 package org.example.string;
 
-public class ReverseEachStringFromWords {
+public class ReverseEachWordFromGivenString {
     public static void main(String[] args) {
         String s = "God Ding";
         System.out.println(reverseWords(s)); //"doG gnid"
