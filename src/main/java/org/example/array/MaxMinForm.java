@@ -4,8 +4,7 @@ public class MaxMinForm {
     public static void main(String[] args) {
         int[] arr =  {1, 2, 3, 4, 5, 6, 7};
 
-        int[] result =  firstApproach(arr);  // 7 1 6 2 5 3 4 
-
+        int[] result =  firstApproach(arr);  // 7 1 6 2 5 3 4
 
     }
 
@@ -25,6 +24,7 @@ public class MaxMinForm {
             int mid = (arr.length-1)/2;
             result[result.length-1] = arr[mid];
         }
+
 
         return result;
     }
