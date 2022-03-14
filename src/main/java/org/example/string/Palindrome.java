@@ -7,6 +7,10 @@ public class Palindrome {
             if(checkPalindrome(item)){
                System.out.println(String.format("%s is palndrome",item));
             }
+
+            else {
+                System.out.println(String.format("%s is not palndrome",item));
+            }
         }
     }
 
