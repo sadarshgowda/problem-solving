@@ -1,6 +1,7 @@
 package org.example.string;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AddSpace {
@@ -12,25 +13,23 @@ public class AddSpace {
 
 
     public static String addSpaces(String s, int[] spaces) {
-        char[] charArray = s.toCharArray();
 
+        StringBuilder builder = new StringBuilder();
 
         List<Integer> spaceList =
-                new ArrayList<Integer>();
+                new ArrayList<Integer>(); //Arrays.asList(spaces)
 
         for(int i=0;i<spaces.length;i++) {
             spaceList.add(spaces[i]);
-
         }
-        String result = "";
-        for(int i=0; i<charArray.length; i++){
+
+        for(int i=0; i<s.length(); i++){
             if(spaceList.contains(i)){
-                result = result + " ";
+                builder.append(" ");
             }
-            result = result + charArray[i];
-
+            builder.append(s.charAt(i));
         }
 
-        return result;
+        return builder.toString();
     }
 }
