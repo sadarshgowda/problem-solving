@@ -2,7 +2,7 @@ package org.example.array;
 
 public class SortZerosAndOnes {
     public static void main(String[] args) {
-        int[] arr = {0,1,0,1,0,1,1,0};
+        int[] arr = {0,0};
 
         //call approachOne
         approachOne(arr);
@@ -40,11 +40,11 @@ public class SortZerosAndOnes {
 
         while (left<right){
 
-            while (arr[left] ==0){
+            while (left!= right && arr[left] ==0){
                 left++;
             }
 
-            while (arr[right] ==1){
+            while (right!= 0 && arr[right] ==1){
                 right--;
             }
 

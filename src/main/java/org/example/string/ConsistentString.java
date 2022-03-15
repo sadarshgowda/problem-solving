@@ -3,9 +3,10 @@ package org.example.string;
 import java.util.HashSet;
 import java.util.Set;
 
+//String which contains only given string characters
 public class ConsistentString {
     public static void main(String[] args) {
-        String allowed = "ab";
+       String allowed = "ab";
        String[] words = {"ad","bd","aaab","baa","badab"};
        System.out.println(checkIfStringIsConsistent(allowed,words));
     }
