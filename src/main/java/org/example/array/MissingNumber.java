@@ -1,4 +1,4 @@
-package org.example.string;
+package org.example.array;
 
 public class MissingNumber {
     public static void main(String[] args) {
